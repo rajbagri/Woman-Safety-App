@@ -12,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
 import com.newstudio.womansafetyapp.ui.theme.WomanSafetyAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             WomanSafetyAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) {
-                    HomeView()
+                    Navigation(navController = rememberNavController())
                 }
             }
         }
